@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FinalProject</string>
+    <string name="activity_News">BBC News reader</string>
+    <string name="BBC_SearchNews">Search</string>
+    <string name="BBC_saveButton">SAVE</string>
+    <string name="BBC_inputText">input to search</string>
+    <string name="bbc_AboutItem">About</string>
+    <string name="bbc_instruction">Instructions</string>
+    <string name="bbc_help">Help</string>
+    <string name="BBC_favorites">favorites</string>
+    <string name="BBC_DeleteBtn">Delete</string>
 </resources>

@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_bbcnews.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_bbcnews_content.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_bbcnews_stats.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/favourites.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_bbcnews.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_list.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/layout/list_view_bbcnews.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/menu/bbc_toolbarmenu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ashly_uktl25/AndroidStudioProjects/FinalProject/app/src/main/res/menu/favourites.xml" value="0.25416666666666665" />
       </map>
     </option>
