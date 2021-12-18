@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BBCNewsActivity.class);
-                startActivityForResult(intent, 50);
+                startActivity(intent);
             }
         });
     }
