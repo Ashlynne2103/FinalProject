@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/bbc_toolbarmenu"
+        android:title="@string/bbc_help"
+        android:visible="true">
+        <menu>
+            <item
+                android:id="@+id/BBC_InstructionItem"
+                android:orderInCategory="104"
+                android:title="@string/bbc_instruction"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/BBC_AboutItem"
+                android:orderInCategory="104"
+                android:title="@string/bbc_AboutItem"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>
