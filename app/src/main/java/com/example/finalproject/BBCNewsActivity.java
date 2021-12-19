@@ -40,7 +40,10 @@ import java.util.ArrayList;
 
 import javax.net.ssl.HttpsURLConnection;
 
-
+/**
+ * activity: BBC News RSS Reader
+ * Date: Dec 16, 2021
+ */
 
 public class BBCNewsActivity extends AppCompatActivity {
     private static final String ACTIVITY_NAME = "BBC News Reader";
@@ -56,6 +59,11 @@ public class BBCNewsActivity extends AppCompatActivity {
     private String tempTitle, tempLink, tempDescription, tempPubDate, tempAuthor;
     BBCNewsData newsData;
 
+    /**
+     * onCreate()method is to create the activity
+     * instantiate variables and
+     * populate data into the listView
+     */
 
 
     @Override
@@ -63,6 +71,8 @@ public class BBCNewsActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bbcnews);
+
+        //instantiate the progress bar and newsList as an ArrayList
 
 
         newsList = new ArrayList<>();
@@ -74,10 +84,13 @@ public class BBCNewsActivity extends AppCompatActivity {
         btnFavorite=findViewById(R.id.BBC_favorites);
         editText.setShowSoftInputOnFocus(false);
 
+        //to populate the listView with data
 
         newsListView = findViewById(R.id.BBC_listView);
         newsAdapter = new NewsAdapter(BBCNewsActivity.this);
         newsListView.setAdapter(newsAdapter);
+
+        String BBCurl = "http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml";
 
 
         newsListView.setOnItemClickListener((parent, view, position, id) -> {
@@ -92,6 +105,8 @@ public class BBCNewsActivity extends AppCompatActivity {
             intent.putExtra("author", newsData.getAuthor());
             startActivity(intent);
         });
+
+        //click search for news titles that you want
 
         btnSearch = findViewById(R.id.BBC_SearchNews);
 
@@ -132,6 +147,10 @@ public class BBCNewsActivity extends AppCompatActivity {
         new NewsQuery().execute();
     }
 
+    /**
+     * onCreateOptionsMenu (menu) is to display the menu and menuitem
+     */
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -168,6 +187,10 @@ public class BBCNewsActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Adpater class, to pass data to the listView
+     */
+
 
     public class NewsAdapter extends ArrayAdapter<BBCNewsData> {
         protected NewsAdapter(Context ctx) {
@@ -183,6 +206,13 @@ public class BBCNewsActivity extends AppCompatActivity {
             return newsList.get(position);
         }
 
+        /**
+         * @param position
+         * @param view
+         * @param parent
+         * @return news title as a View object at the row position
+         */
+
 
         public View getView(int position, View view, ViewGroup parent) {
 
@@ -197,6 +227,10 @@ public class BBCNewsActivity extends AppCompatActivity {
             return position;
         }
     }
+
+    /**
+     * class NewsQuery is used to get data from the news web site
+     */
 
     private class NewsQuery extends AsyncTask<String, String, String> {
         InputStream stream;
@@ -272,8 +306,10 @@ public class BBCNewsActivity extends AppCompatActivity {
             }
             try {
 
-                url = new URL("http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml");
-                HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+                URL BBCurl = new URL(args[0]);
+                HttpsURLConnection conn = (HttpsURLConnection) BBCurl.openConnection();
+                InputStream inputBBC = conn.getInputStream();
+
                 conn.setReadTimeout(10000 /* milliseconds */);
                 conn.setConnectTimeout(15000 /* milliseconds */);
                 conn.setRequestMethod("GET");

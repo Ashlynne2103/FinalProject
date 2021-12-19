@@ -20,6 +20,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * BBCNewsContent activity shows details of the news
+ */
+
 
 public class BBCNewsContent extends Activity {
     private static final String ACTIVITY_NAME = "News Content Activity";
